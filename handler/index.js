@@ -75,10 +75,12 @@ await client.application.commands.set(arrayOfSlashCommands).then((slashCommandsD
    return console.log(`⚡ I was Invited to ${guild.name}! I will now start creating the Slash Commands (If i have perms)`)
     })
 // Mongoose
+  /*
   mongoose.connect(process.env.mongooseConnectionString, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   }).then(console.log(`🏆 Loading MONGO database`))
+  */
   
 }
 
