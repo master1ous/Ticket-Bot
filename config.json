@@ -1,5 +1,6 @@
 
 {  
+  "token": "",
   "prefix": "t!",
   "activity": "/help | watching tickets ✌️ | On Cluster: {shards} | coded by .gg/azury",
   "type": "WATCHING",
