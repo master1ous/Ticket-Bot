@@ -1,16 +1,12 @@
 const client = require("../index");
 const { MessageEmbed, Collection } = require("discord.js")
 const cooldowns = new Map();
-const model_active = require("../models/active")
 
 client.on("interactionCreate", async (interaction) => {
     // Slash Command Handling
     if (interaction.isCommand()) {
       const cmd = client.slashCommands.get(interaction.commandName);
-      if (!cmd) return interaction.followUp({ content: "An error has occured " });
-
-      // let model_active2 = await model_active.findOne({ Guild: interaction.guild.id })
-      // if(!model_active2 && cmd.premium == true) return interaction.reply({ content: `⭐ This server isn't a premium server therefore you cannot use any commands!\n\n> ***[Buy a premium license here](https://discord.azury.live)***`, ephemeral: true })
+      if (!cmd) return interaction.editReply({ content: "An error has occured " });
 
       if (!cooldowns.has(cmd.name)) {
         const coll = new Collection();
